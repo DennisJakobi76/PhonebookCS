@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6+MaA5eZlN8nkvhTsY5tw1lznRDgNAaEN3oMZcbI02G+T5kR17QnPcsKZ+DIaaDB2zgngcuJzK2XL0FVU5jYNQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jakobi\\OneDrive - adesso Group\\Desktop\\Dev\\CS_Projects\\phonebook_cs\\phonebook_cs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jakobi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.4\\microsoft.aspnetcore.app.ref.7.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

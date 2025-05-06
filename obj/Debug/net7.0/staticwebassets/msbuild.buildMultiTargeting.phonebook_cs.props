@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\phonebook_cs.props" />
+</Project>
