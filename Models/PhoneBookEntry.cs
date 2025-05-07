@@ -5,25 +5,26 @@ public class PhoneBookEntry
 	[JsonPropertyName("id")]
 	public long Id { get; set; }
 
-	[JsonPropertyName("vorname")]
-	public string Vorname { get; set; }
+	[JsonPropertyName("firstName")]
+	public string FirstName { get; set; }
 
-	[JsonPropertyName("nachname")]
-	public string Nachname { get; set; }
+	[JsonPropertyName("lastName")]
+	public string LastName { get; set; }
 
-	[JsonPropertyName("telefonVorwahl")]
-	public string TelefonVorwahl { get; set; }
+	[JsonPropertyName("phonePrefix")]
+	public string PhonePrefix { get; set; }
 
-	[JsonPropertyName("telefonnummer")]
-	public string Telefonnummer { get; set; }
+	[JsonPropertyName("phoneNumber")]
+	public string PhoneNumber { get; set; }
 
 	// Konstruktor
-	public PhoneBookEntry(long id, string vorname, string nachname, string telefonVorwahl, string telefonnummer)
+	public PhoneBookEntry(long id, string firstName, string lastName, string phonePrefix, string phoneNumber)
 	{
 		Id = id;
-		Vorname = vorname;
-		Nachname = nachname;
-		TelefonVorwahl = telefonVorwahl;
-		Telefonnummer = telefonnummer;
+		FirstName = firstName;
+		LastName = lastName;
+		PhonePrefix = phonePrefix;
+		PhoneNumber = phoneNumber;
 	}
+
 }

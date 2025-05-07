@@ -21,8 +21,8 @@ namespace phonebook_cs.Models.Services
 
 		public IEnumerable<PhoneBookEntry> FilterByName(string name) =>
 	eintraege.Where(e =>
-		(!string.IsNullOrEmpty(e.Vorname) && e.Vorname.Contains(name, StringComparison.OrdinalIgnoreCase)) ||
-		(!string.IsNullOrEmpty(e.Nachname) && e.Nachname.Contains(name, StringComparison.OrdinalIgnoreCase)));
+		(!string.IsNullOrEmpty(e.FirstName) && e.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase)) ||
+		(!string.IsNullOrEmpty(e.LastName) && e.LastName.Contains(name, StringComparison.OrdinalIgnoreCase)));
 
 
 		public PhoneBookEntry? GetById(long id) => eintraege.FirstOrDefault(e => e.Id == id);
@@ -38,10 +38,10 @@ namespace phonebook_cs.Models.Services
 			var existing = GetById(id);
 			if (existing == null) return false;
 
-			existing.Vorname = updated.Vorname;
-			existing.Nachname = updated.Nachname;
-			existing.TelefonVorwahl = updated.TelefonVorwahl;
-			existing.Telefonnummer = updated.Telefonnummer;
+			existing.FirstName = updated.FirstName;
+			existing.LastName = updated.LastName;
+			existing.PhonePrefix = updated.PhonePrefix;
+			existing.PhoneNumber = updated.PhoneNumber;
 			return true;
 		}
 
