@@ -15,11 +15,11 @@ public class PhoneBookController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<PhoneBookEntry>> GetAll([FromQuery] string? name)
+    public ActionResult<IEnumerable<PhoneBookEntry>> GetAll([FromQuery] string? userInput)
     {
-        return Ok(string.IsNullOrWhiteSpace(name)
+        return Ok(string.IsNullOrWhiteSpace(userInput)
             ? _service.GetAll()
-            : _service.FilterByName(name));
+            : _service.FilterByNameOrPrefix(userInput));
     }
 
     [HttpGet("{id}")]
