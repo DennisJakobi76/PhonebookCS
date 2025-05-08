@@ -19,10 +19,11 @@ namespace phonebook_cs.Models.Services
 
 		public List<PhoneBookEntry> GetAll() => eintraege;
 
-		public IEnumerable<PhoneBookEntry> FilterByName(string name) =>
+		public IEnumerable<PhoneBookEntry> FilterByNameOrPrefix(string userInput) =>
 	eintraege.Where(e =>
-		(!string.IsNullOrEmpty(e.FirstName) && e.FirstName.Contains(name, StringComparison.OrdinalIgnoreCase)) ||
-		(!string.IsNullOrEmpty(e.LastName) && e.LastName.Contains(name, StringComparison.OrdinalIgnoreCase)));
+		(!string.IsNullOrEmpty(e.FirstName) && e.FirstName.Contains(userInput, StringComparison.OrdinalIgnoreCase)) ||
+		(!string.IsNullOrEmpty(e.LastName) && e.LastName.Contains(userInput, StringComparison.OrdinalIgnoreCase)) ||
+		(!string.IsNullOrEmpty(e.PhonePrefix) && e.PhonePrefix.Contains(userInput, StringComparison.OrdinalIgnoreCase)));
 
 
 		public PhoneBookEntry? GetById(long id) => eintraege.FirstOrDefault(e => e.Id == id);
